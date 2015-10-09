@@ -1,6 +1,6 @@
 <?php
 
-namespace Abstractable;
+namespace Aldente;
 
 /**
  * A collection of unique values.

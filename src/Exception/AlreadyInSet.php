@@ -1,8 +1,8 @@
 <?php
 
-namespace Abstractable\Exception;
+namespace Aldente\Exception;
 
-class AlreadyInSet extends \OutOfBoundsException implements AbstractableException
+class AlreadyInSet extends \OutOfBoundsException implements AldenteException
 {
 }
 

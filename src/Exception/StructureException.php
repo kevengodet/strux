@@ -1,7 +1,7 @@
 <?php
 
-namespace Abstractable\Exception;
+namespace Aldente\Exception;
 
-interface AbstractableException
+interface AldenteException
 {
 }

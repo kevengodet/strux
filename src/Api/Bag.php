@@ -1,6 +1,6 @@
 <?php
 
-namespace Abstractable;
+namespace Aldente;
 
 /**
  * An unordered collection of values.

@@ -1,9 +1,9 @@
 <?php
 
-namespace Abstractable;
+namespace Aldente;
 
-use Abstractable\Exception\AlreadyInSetException;
-use Abstractable\Api\Set as SetInterface;
+use Aldente\Exception\AlreadyInSetException;
+use Aldente\Api\Set as SetInterface;
 
 /**
  *
