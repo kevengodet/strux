@@ -110,8 +110,7 @@ interface Set extends \Countable, \IteratorAggregate
     // Collection pipeline
 
     /**
-     * Returns an array of the respective return values of a callback for each
-     * entry in this collection.
+     * Maps all values in the Set with the callback
      *
      * @param callable $callback
      *
@@ -120,8 +119,7 @@ interface Set extends \Countable, \IteratorAggregate
     public function map($callback);
 
     /**
-     * Returns an array with each value from this collection that passes the
-     * given test.
+     * Keep each value from this collection that passes the given test
      *
      * @param callable $callback
      *
@@ -138,7 +136,7 @@ interface Set extends \Countable, \IteratorAggregate
      *
      * @return mixed
      */
-    public function reduce($callback, $basis);
+    public function reduce($callback, $basis = null);
 
     // Utilities
 

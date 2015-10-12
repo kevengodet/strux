@@ -208,4 +208,70 @@ class Set implements Api\Set
     {
         return new \ArrayIterator($this->elements);
     }
+
+    // Collection pipeline
+
+    /**
+     * Maps all values in the Set with the callback
+     *
+     * @param callable $callback
+     *
+     * @return Set
+     */
+    public function map($callback)
+    {
+        $this->elements = array_map($callback, $this->elements);
+
+        return $this;
+    }
+
+    /**
+     * Keep each value from this collection that passes the given test
+     *
+     * @param callable $callback
+     *
+     * @return Set
+     */
+    public function select($callback)
+    {
+        $this->elements = array_filter($this->elements, $callback);
+
+        return $this;
+    }
+
+    /**
+     * Aggregates every value in this collection with the result collected up to
+     * that index.
+     *
+     * @param callable $callback
+     * @param mixed $basis
+     *
+     * @return mixed
+     */
+    public function reduce($callback, $basis = null)
+    {
+        return array_reduce($this->elements, $callback, $basis);
+    }
+
+    // Utilities
+
+    /**
+     * Returns an array of each value in this collection.
+     *
+     * @return array
+     */
+    public function toArray()
+    {
+        return $this->elements;
+    }
+
+    /**
+     * Empties the Set of any value
+     *
+     * @return Set
+     */
+    public function clear()
+    {
+        $this->elements = [];
+    }
 }
