@@ -9,7 +9,7 @@ namespace Aldente\Api;
  *   - unsorted
  *   - not associative
  */
-interface Set extends \Countable, \Iterator
+interface Set extends \Countable, \IteratorAggregate
 {
     // Set operations
 

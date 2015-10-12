@@ -166,4 +166,15 @@ class Set implements Api\Set
     {
         return count($this->elements);
     }
+
+    // IteratorAggregate implementation
+
+    /**
+     *
+     * @return \ArrayIterator
+     */
+    public function getIterator()
+    {
+        return new \ArrayIterator($this->elements);
+    }
 }
