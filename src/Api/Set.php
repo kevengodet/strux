@@ -46,11 +46,16 @@ interface Set extends \Countable, \IteratorAggregate
     public function isEmpty();
 
     /**
-     * Removes a random value from the set and returns it
+     * Removes random value(s) from the set and returns it
+     *
+     * Returns a single value if $quantity = 1, or an array if $quantity > 1
      *
      * @param int $quantity How many elements to pick
      *
-     * @return mixed
+     * @return int|array
+     *
+     * @throws \InvalidArgumentException
+     * @throws \OutOfBoundsException
      */
     public function pick($quantity = 1);
 

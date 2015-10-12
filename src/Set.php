@@ -87,6 +87,9 @@ class Set implements Api\Set
      * @param int $quantity How many elements to pick
      *
      * @return int|array
+     *
+     * @throws \InvalidArgumentException
+     * @throws \OutOfBoundsException
      */
     public function pick($quantity = 1)
     {
