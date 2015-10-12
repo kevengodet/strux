@@ -1,6 +1,6 @@
 <?php
 
-namespace Aldente;
+namespace Aldente\Api;
 
 /**
  * An unordered collection of values.

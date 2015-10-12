@@ -1,6 +1,6 @@
 <?php
 
-namespace Aldente;
+namespace Aldente\Api;
 
 /**
  * A collection of unique values.

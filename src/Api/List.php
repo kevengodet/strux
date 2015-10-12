@@ -1,6 +1,6 @@
 <?php
 
-namespace Aldente;
+namespace Aldente\Api;
 
 /**
  * An ordered collection of values.
