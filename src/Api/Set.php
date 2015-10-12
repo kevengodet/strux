@@ -48,11 +48,11 @@ interface Set extends \Countable, \IteratorAggregate
     /**
      * Removes random value(s) from the set and returns it
      *
-     * Returns a single value if $quantity = 1, or an array if $quantity > 1
+     * Returns a single value if called without argument, or an array else.
      *
      * @param int $quantity How many elements to pick
      *
-     * @return int|array
+     * @return mixed
      *
      * @throws \InvalidArgumentException
      * @throws \OutOfBoundsException
