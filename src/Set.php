@@ -6,13 +6,13 @@ namespace Aldente;
  *
  * @see Api\Set
  */
-class Set implements Api\Set
+final class Set implements Api\Set
 {
     /**
      *
      * @var array of elements
      */
-    protected $elements = array();
+    private $elements = array();
 
     /**
      *
