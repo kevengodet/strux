@@ -2,14 +2,11 @@
 
 namespace Aldente;
 
-use Aldente\Exception\AlreadyInSetException;
-use Aldente\Api\Set as SetInterface;
-
 /**
  *
  * @see SetInterface
  */
-class Set implements SetInterface
+class Set implements Api\Set
 {
     /**
      *
