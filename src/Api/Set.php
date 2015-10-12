@@ -127,7 +127,7 @@ interface Set extends \Countable, \IteratorAggregate
      *
      * @return Set
      */
-    public function filter($callback);
+    public function select($callback);
 
     /**
      * Aggregates every value in this collection with the result collected up to
