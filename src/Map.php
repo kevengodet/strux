@@ -77,6 +77,17 @@ final class Map implements Api\Map
         return 0 == count($this->elements);
     }
 
+    // Countable implementation
+
+    /**
+     *
+     * @return int
+     */
+    public function count()
+    {
+        return count($this->elements);
+    }
+
     // IteratorAggregate implementation
 
     /**
