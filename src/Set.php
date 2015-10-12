@@ -4,7 +4,7 @@ namespace Aldente;
 
 /**
  *
- * @see SetInterface
+ * @see Api\Set
  */
 class Set implements Api\Set
 {
@@ -16,7 +16,7 @@ class Set implements Api\Set
 
     /**
      *
-     * @param SetInterface|Iterator|array $values
+     * @param Api\Set|Iterator|array $values
      */
     public function __construct($values = array())
     {
@@ -25,7 +25,7 @@ class Set implements Api\Set
         }
     }
 
-    // SetInterface implementation
+    // Api\Set implementation
 
     /**
      *
@@ -113,9 +113,9 @@ class Set implements Api\Set
     /**
      * Returns the set of values including all values from both of these sets.
      *
-     * @param SetInterface|Iterator|array $set
+     * @param Api\Set|Iterator|array $set
      *
-     * @return SetInterface
+     * @return Api\Set
      */
     public function union($set)
     {
@@ -131,9 +131,9 @@ class Set implements Api\Set
     /**
      * Returns the set of values that are in both of these sets.
      *
-     * @param SetInterface|Iterator|array $set
+     * @param Api\Set|Iterator|array $set
      *
-     * @return SetInterface
+     * @return Api\Set
      */
     public function intersection($set)
     {
@@ -152,9 +152,9 @@ class Set implements Api\Set
      * Returns the set of values that are in this set, excluding the values that
      * are also in the other set.
      *
-     * @param SetInterface|Iterator|array $set
+     * @param Api\Set|Iterator|array $set
      *
-     * @return SetInterface
+     * @return Api\Set
      */
     public function difference($set)
     {
@@ -172,18 +172,18 @@ class Set implements Api\Set
     /**
      * Returns the set of values that are only in one of these sets.
      *
-     * @param SetInterface|Iterator|array $set
+     * @param Api\Set|Iterator|array $set
      *
-     * @return SetInterface
+     * @return Api\Set
      */
     public function symmetricDifference($set);
 
     /**
      * Returns the set of values that are only in one of these sets.
      *
-     * @param SetInterface|Iterator|array $set
+     * @param Api\Set|Iterator|array $set
      *
-     * @return SetInterface
+     * @return Api\Set
      */
     public function equals($set);
 
