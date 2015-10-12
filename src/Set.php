@@ -64,7 +64,7 @@ final class Set implements Api\Set
     public function remove($value)
     {
         if ($this->has($value)) {
-            unset($this->elements[array_search($value, $this->elements)]);;
+            unset($this->elements[array_search($value, $this->elements)]);
         }
 
         return $this;
