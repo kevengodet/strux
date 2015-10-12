@@ -77,6 +77,17 @@ final class Map implements Api\Map
         return 0 == count($this->elements);
     }
 
+    // IteratorAggregate implementation
+
+    /**
+     *
+     * @return \ArrayIterator
+     */
+    public function getIterator()
+    {
+        return new \ArrayIterator($this->elements);
+    }
+
     // Collection pipeline
 
     /**
