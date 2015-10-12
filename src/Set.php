@@ -80,6 +80,34 @@ class Set implements Api\Set
     }
 
     /**
+     * Removes random value(s) from the set and returns it
+     *
+     * Returns a single value if $quantity = 1, or an array if $quantity > 1
+     *
+     * @param int $quantity How many elements to pick
+     *
+     * @return int|array
+     */
+    public function pick($quantity = 1)
+    {
+        if (!is_int($quantity)) {
+            throw new \InvalidArgumentException('You can only pick a natural number of values.');
+        }
+
+        if ($quantity < 1) {
+            throw new \OutOfBoundsException('You can only pick a strictly positive number of values.');
+        }
+
+        $values = [];
+        foreach (array_rand($this->elements, $quantity) as $key) {
+            $values[] = $this->elements[$key];
+            unset($this->elements[$key]);
+        }
+
+        return $quantity == 1 ? reset($values) : $values;
+    }
+
+    /**
      * Returns the set of values including all values from both of these sets.
      *
      * @param SetInterface|Iterator|array $set

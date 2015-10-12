@@ -48,9 +48,11 @@ interface Set extends \Countable, \IteratorAggregate
     /**
      * Removes a random value from the set and returns it
      *
+     * @param int $quantity How many elements to pick
+     *
      * @return mixed
      */
-    public function pick();
+    public function pick($quantity = 1);
 
     // Algebra of sets
 
