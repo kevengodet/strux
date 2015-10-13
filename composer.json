@@ -1,0 +1,19 @@
+{
+    "name": "aldente/aldente",
+    "description": "Abstract Data Types library",
+    "type": "library",
+    "keywords": ["data type", "data structure", "bag", "set", "map", "list", "sequence"],
+    "homepage": "https://github.com/kgodet/Aldente",
+    "license": "CC-BY-NC-SA-4.0",
+    "authors": [
+        {
+            "name": "Keven Godet",
+            "email": "keven@adagiolabs.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Aldente\\": "src/"
+        }
+    }
+}
