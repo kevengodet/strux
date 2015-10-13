@@ -220,9 +220,7 @@ final class Set implements Api\Set
      */
     public function map($callback)
     {
-        $this->elements = array_map($callback, $this->elements);
-
-        return $this;
+        return new Set(array_map($callback, $this->elements));
     }
 
     /**
@@ -234,9 +232,7 @@ final class Set implements Api\Set
      */
     public function select($callback)
     {
-        $this->elements = array_filter($this->elements, $callback);
-
-        return $this;
+        return new Set(array_filter($this->elements, $callback));
     }
 
     /**
