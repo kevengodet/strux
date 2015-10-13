@@ -176,7 +176,11 @@ final class Set implements Api\Set
      *
      * @return Api\Set
      */
-    public function symmetricDifference($set);
+    public function symmetricDifference($set)
+    {
+        return $this->union($set)->
+                      difference($this->intersection($set));
+    }
 
     /**
      * Returns the set of values that are only in one of these sets.
@@ -185,7 +189,10 @@ final class Set implements Api\Set
      *
      * @return Api\Set
      */
-    public function equals($set);
+    public function equals($set)
+    {
+        return 0 == $this->symmetricDifference($set);
+    }
 
     // Countable implementation
 
